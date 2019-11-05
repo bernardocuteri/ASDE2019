@@ -1,5 +1,6 @@
 import React from 'react'
 import BlogBaseInstance from '../http-client/BlogBaseInstance'
+import Post from './Post'
 
 
 
@@ -22,7 +23,10 @@ export default class Posts extends React.Component {
 
         
         return (
-            <div></div>
+            <div>
+                {this.state.posts.map( (post) => <Post data={post}/> )}
+
+            </div>
         )
     }
 }
