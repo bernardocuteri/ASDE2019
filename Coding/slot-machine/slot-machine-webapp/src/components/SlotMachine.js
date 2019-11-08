@@ -52,6 +52,7 @@ export default class SlotMachine extends React.Component {
                     <Slots slots={this.state.slots}></Slots>
                     <BetPanel betHandler={this.betHandler} coins={this.state.coins}></BetPanel>
                     <Coins amount={this.state.coins}></Coins>
+                    {this.state.coins < 5 && <h2 style={{color: "red"}}>Sorry, you finished your credits</h2>}
                 </React.Fragment>
             )
         } else {
