@@ -1,10 +1,22 @@
 package it.unical.asde.slotmachineservice.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class GameStatus {
 
-	
+	@Id
 	private String user;
+	
+	@Column(nullable = false)
 	private Integer coins;
+	
+	
+	public GameStatus() {
+		super();
+	}
 	
 	public GameStatus(String user, Integer coins) {
 		super();
